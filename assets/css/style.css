@@ -1195,3 +1195,160 @@ h1, h2, h3, h4 {
     grid-template-columns: 1fr;
   }
 }
+
+/* ════════════════════════════════════════════
+   JOB SEEKERS PAGE
+   ════════════════════════════════════════════ */
+
+/* ─── Benefits ─── */
+.benefits-section {
+  padding: 96px 0;
+  background: var(--gray-50);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.benefit-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+}
+
+.benefit-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.benefit-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--primary-light);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 18px;
+}
+
+.benefit-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+.benefit-card p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* ─── Requirements ─── */
+.requirements-section {
+  padding: 96px 0;
+  background: var(--white);
+}
+
+.requirements-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.requirements-text h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 14px;
+  line-height: 1.2;
+  margin-top: 16px;
+}
+
+.requirements-text p {
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.65;
+}
+
+.req-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.req-item {
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--gray-100);
+  align-items: flex-start;
+}
+
+.req-item:first-child {
+  border-top: 1px solid var(--gray-100);
+}
+
+.req-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.req-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.req-content strong {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.req-content span {
+  font-size: 13px;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+/* ─── Job Seekers Responsive ─── */
+@media (max-width: 1024px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .requirements-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits-section,
+  .requirements-section {
+    padding: 64px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
