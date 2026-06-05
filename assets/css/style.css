@@ -192,7 +192,7 @@ h1, h2, h3, h4 {
 }
 
 .logo-img {
-  height: 44px;
+  height: 50px;
   width: auto;
   object-fit: contain;
 }
@@ -595,11 +595,12 @@ h1, h2, h3, h4 {
 }
 
 .footer-logo {
-  height: 40px;
+  height: 45px;
   width: auto;
   object-fit: contain;
   margin-bottom: 14px;
   filter: brightness(0) invert(1);
+  display: block;
 }
 
 .footer-tagline {
