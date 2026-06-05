@@ -1811,6 +1811,22 @@ h1, h2, h3, h4 {
   justify-content: center;
 }
 
+.form-success {
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-success p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #166534;
+  line-height: 1.5;
+}
+
 /* ─── Contact Responsive ─── */
 @media (max-width: 1024px) {
   .contact-layout {
