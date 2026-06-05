@@ -55,4 +55,24 @@
       }
     });
   }
+  // Accordion
+  document.querySelectorAll('.accordion-trigger').forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      const item = trigger.closest('.accordion-item');
+      const isOpen = item.classList.contains('open');
+
+      // Close all siblings
+      const accordion = trigger.closest('.accordion');
+      accordion.querySelectorAll('.accordion-item.open').forEach(function (openItem) {
+        openItem.classList.remove('open');
+        openItem.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
+      });
+
+      // Toggle clicked item
+      if (!isOpen) {
+        item.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 })();
